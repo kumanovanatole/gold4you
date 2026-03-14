@@ -10,6 +10,13 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5179,
     strictPort: true,
+    proxy: {
+      '/api/spot': {
+        target: 'https://forex-data-feed.swissquote.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api\/spot/, '/public-quotes/bboquotes/instrument/XAU/EUR'),
+      },
+    },
   },
   preview: {
     port: 5179,
