@@ -20,14 +20,16 @@ const T: Record<Lang, Record<string, string>> = {
     buyNow: 'Buy gold now.', payOver: 'Pay over 3 to 24 months.', goldShips: 'Gold ships immediately',
     yourBar: 'Your gold bar from', perMonth: '/month', months: 'months',
     chooseBar: 'Choose Your Bar', howItWorks: 'How it works', requirements: 'Requirements',
-    financingFaq: 'Financing FAQ', availCountries: 'Available in 12 countries',
+    financingFaq: 'Financing FAQ', availCountries: 'Available in 10 countries',
+    availCountriesDirect: 'Outside these countries: direct purchase only (card, bank transfer, crypto).',
+    creditCheckVia: 'Credit check via',
     customerReviews: 'Customer Reviews', verifiedBuyers: 'Verified Buyers', verified: 'Verified',
     reviews: 'reviews', recognizedBy: 'Recognized by', contact: 'Contact', getInTouch: 'Get in Touch',
     refinery: 'Refinery', office: 'Office', reachUs: 'Reach Us', whatsapp: 'WhatsApp',
     imprint: 'Imprint', privacy: 'Privacy', terms: 'Terms', shipping: 'Shipping',
     trustBadgeLbma: 'LBMA Certified', trustBadgeDelivery: 'Insured Delivery', trustBadgeVat: 'VAT Exempt',
     trustBadgeFinance: '0% Financing', trustBadgeLock: 'Price Lock 15 min',
-    heroTitle1: 'Gold bars from', heroTitle2: 'Finance from', heroSub: 'LBMA certified gold bars from licensed Dubai refineries. VAT-free, insured delivery, financing available.',
+    heroTitle1: 'Gold bars from', heroTitle2: 'Finance from', heroSub: 'LBMA certified gold bars processed in the UAE. VAT-free, insured delivery. Installments in 10 countries; direct purchase elsewhere.',
     heroBadge: 'Trusted Swiss Gold Dealer',
     catalogSub: 'LBMA Certified', catalogTitle: 'Buy Discount Gold Bars Online',
     financingProfile: 'Financing Profile', financingProfileSub: 'Complete your profile to apply for gold financing. Get approved in minutes and receive your gold bar the same day.',
@@ -67,7 +69,8 @@ const T: Record<Lang, Record<string, string>> = {
     coCreditDebit: 'Credit / Debit Card', coCreditDebitSub: 'Visa, Mastercard, AMEX',
     coBankTransfer: 'Bank Transfer', coBankTransferSub: 'SEPA / IBAN',
     coCrypto: 'Cryptocurrency', coCryptoSub: 'BTC, ETH, USDT',
-    coFinancingSub: '6–48 months, 0% interest',
+    coFinancingSub: '6–48 months · 10 countries',
+    coFinanceRegionNote: 'Installments only for delivery to one of our 10 supported countries. Other countries: direct purchase only.',
     coCardNumber: 'Card Number', coExpiry: 'Expiry', coCvc: 'CVC',
     coAccepted: 'Accepted', co3dSecure: '3D Secure',
     coBankInfo: 'Transfer to our account after placing your order:',
@@ -147,7 +150,7 @@ const T: Record<Lang, Record<string, string>> = {
     finStep3: 'Gold ships today', finStep3Sub: 'Once approved, your bar ships the same day. You own it immediately.',
     finStep4: 'Pay in installments', finStep4Sub: 'gold4you sends you monthly invoices. Pay via bank transfer or card.',
     finDiscTitle: 'How financing works with gold4you',
-    finDiscP1: 'gold4you does not issue credit directly. All financing is provided by licensed, regulated third-party credit institutions. When you apply, your request is forwarded to the relevant credit partner (e.g. Byjuno or Powerpay in Switzerland, Klarna in the EU). They perform a credit assessment, set the terms, and manage the loan.',
+    finDiscP1: 'Installment plans are available in 10 countries (CH, DE, AT, FR, IT, ES, NL, BE, SE, FI). Outside these countries, direct purchase only. Financing is provided by licensed partners (e.g. Byjuno/Powerpay in CH, Klarna in the EU); gold4you ships upon approval.',
     finDiscP2: 'gold4you acts as the merchant \u2014 we sell you the gold, ship it immediately upon approval, and your credit partner invoices you monthly. Your data is shared only with the financing partner processing your application.',
     finBar: 'Bar', finPrice: 'Price', finTerm: 'Term', finApr: 'APR', finMonthly: 'Monthly',
     finPricesLive: 'Prices based on live spot. Updated every 15 min.',
@@ -189,16 +192,17 @@ const T: Record<Lang, Record<string, string>> = {
     aboutAllPrices: 'All Prices', aboutBelowMarket: 'below market',
     aboutDifferent: 'What makes us different',
     aboutSpotTitle: 'Spot \u22122% Pricing', aboutSpotSub: 'Every bar priced 2% below spot. No hidden fees, no inflated spreads.',
-    aboutFinTitle: 'White-Label Financing', aboutFinSub: 'All invoicing and installments managed directly by gold4you \u2014 no third-party redirect.',
-    aboutSourcingTitle: 'Dubai LBMA Refineries', aboutSourcingSub: 'All bars refined in Dubai by LBMA-accredited refineries. Assay certified, fully traceable, conflict-free gold.',
+    aboutFinTitle: 'Installment plans', aboutFinSub: 'Ratenzahlung in 10 European countries. Outside these markets: direct purchase only.',
+    aboutSourcingTitle: 'Processed in the UAE', aboutSourcingSub: 'Our gold is refined and processed in the United Arab Emirates (Emirates). LBMA certified, assay sealed, fully traceable.',
+    aboutUaeTitle: 'United Arab Emirates', aboutUaeSub: 'Refining and processing take place in the Emirates before insured export to your country.',
+    aboutFinRegionTitle: 'Where installments apply', aboutFinRegionSub: 'Installments in Switzerland, Germany, Austria, France, Italy, Spain, Netherlands, Belgium, Sweden and Finland. All other destinations: direct purchase only.',
     aboutHowWorks: 'How gold4you works',
     aboutBrowse: 'Browse & select', aboutBrowseSub: '1g to 5kg bars, all at spot \u22122%.',
-    aboutCheckout: 'Checkout', aboutCheckoutSub: 'Card, bank, crypto, or financing.',
+    aboutCheckout: 'Checkout', aboutCheckoutSub: 'Card, bank transfer or crypto worldwide; installments in 10 countries.',
     aboutSameDay: 'Same-day shipping', aboutSameDaySub: 'Express from Dubai, insured delivery, signature required.',
     aboutYours: "It's yours", aboutYoursSub: 'You own from day one.',
-    aboutPartners: 'Our refinery partners (Dubai)',
     aboutLocations: 'Our locations',
-    aboutHQ: 'Headquarters', aboutRefPartner: 'Refinery Partners',
+    aboutHQ: 'Headquarters',
     aboutRegNo: 'Reg. No.', aboutHours: 'Hours',
     aboutTeam: 'Our team',
     aboutGetInTouch: 'Get in touch',
@@ -212,7 +216,7 @@ const T: Record<Lang, Record<string, string>> = {
     homeFromPrice: 'From', homePerMonth: 'per month', homeTerms: 'terms', homeFromApr: 'from APR', homeSameDay: 'Same day',
     homeFinExamples: 'Financing examples',
     homeAprNote: '0% APR financing (6\u201348 months). Final terms depend on credit assessment. Invoicing managed by gold4you AG via MF Group AG.',
-    homeCreditVia: 'Credit assessment via local partner. All invoicing by gold4you AG. Contact us for other European countries.',
+    homeCreditVia: 'Credit assessment via local partner. All invoicing by gold4you AG.',
     homeRequirements: 'Requirements',
     homeReqAge: 'Minimum age 18', homeReqAgeSub: 'Applicant must be of legal age and a resident in a supported country.',
     homeReqIncome: 'Proof of income', homeReqIncomeSub: 'Employed, self-employed, or retired with documented income.',
@@ -223,7 +227,7 @@ const T: Record<Lang, Record<string, string>> = {
     homePersonalAdvisor: 'Personal advisor \u00b7 Online',
     // Shop
     shopGoldSpot: 'Gold Spot', shopLoading: 'Loading...', shopOffline: 'Offline',
-    shopOurPrice: 'Our price: \u22122%', shopViewDetails: 'View Details',
+    shopOurPrice: 'Our price: \u22122%', shopViewDetails: 'View Details', soldOut: 'Sold Out', notAvailable: 'Not available',
     // KYC modal
     kycTitle: 'Identity Verification', kycSubtitle: 'KYC Verification Required',
     kycSub: 'Orders above 5 kg or custom requests require identity verification per Swiss AML regulations.',
@@ -253,8 +257,8 @@ const T: Record<Lang, Record<string, string>> = {
     impFinByjuno: 'Byjuno AG (BNPL, Switzerland)',
     impFinPowerpay: 'Powerpay (installment payments, Switzerland)',
     impFinKlarna: 'Klarna Bank AB (EU markets)',
-    impRefineries: 'Refinery Locations',
-    impRefineriesText: 'All gold bars are refined in Dubai, UAE, by LBMA-accredited refineries:',
+    impRefineries: 'Gold processing',
+    impRefineriesText: 'All gold bars are refined and processed in the United Arab Emirates (Emirates). LBMA certified.',
     impDisclaimer: 'Disclaimer',
     impDisclaimerText: '{t.impDisclaimerText}',
     impExtLinks: '{t.impExtLinks}',
@@ -446,14 +450,16 @@ const T: Record<Lang, Record<string, string>> = {
     buyNow: 'Gold jetzt kaufen.', payOver: 'In 3 bis 24 Monaten bezahlen.', goldShips: 'Gold wird sofort versendet',
     yourBar: 'Dein Goldbarren ab', perMonth: '/Monat', months: 'Monate',
     chooseBar: 'Barren wählen', howItWorks: 'So funktioniert\'s', requirements: 'Voraussetzungen',
-    financingFaq: 'Finanzierungs-FAQ', availCountries: 'In 12 Ländern verfügbar',
+    financingFaq: 'Finanzierungs-FAQ', availCountries: 'In 10 Ländern verfügbar',
+    availCountriesDirect: 'Ausserhalb dieser Länder: nur Direktkauf (Karte, Überweisung, Krypto).',
+    creditCheckVia: 'Bonitätsprüfung über',
     customerReviews: 'Kundenbewertungen', verifiedBuyers: 'Verifizierte Käufer', verified: 'Verifiziert',
     reviews: 'Bewertungen', recognizedBy: 'Bekannt aus', contact: 'Kontakt', getInTouch: 'Kontaktieren Sie uns',
     refinery: 'Raffinerie', office: 'Büro', reachUs: 'Erreichen Sie uns', whatsapp: 'WhatsApp',
     imprint: 'Impressum', privacy: 'Datenschutz', terms: 'AGB', shipping: 'Versand',
     trustBadgeLbma: 'LBMA Zertifiziert', trustBadgeDelivery: 'Versicherter Versand', trustBadgeVat: 'MwSt.-frei',
     trustBadgeFinance: '0% Finanzierung', trustBadgeLock: 'Preis 15 Min fixiert',
-    heroTitle1: 'Goldbarren ab', heroTitle2: 'Finanzierung ab', heroSub: 'LBMA-zertifizierte Goldbarren aus lizenzierten Dubai-Raffinerien. MwSt.-frei, versicherter Versand, Finanzierung verfügbar.',
+    heroTitle1: 'Goldbarren ab', heroTitle2: 'Finanzierung ab', heroSub: 'LBMA-zertifizierte Goldbarren, verarbeitet in den VAE. MwSt.-frei, versicherter Versand. Ratenzahlung in 10 Ländern; ausserhalb nur Direktkauf.',
     heroBadge: 'Vertrauenswürdiger Schweizer Goldhändler',
     catalogSub: 'LBMA Zertifiziert', catalogTitle: 'Goldbarren günstig online kaufen',
     financingProfile: 'Finanzierungsprofil', financingProfileSub: 'Vervollständigen Sie Ihr Profil für die Goldfinanzierung. Genehmigung in Minuten.',
@@ -492,7 +498,8 @@ const T: Record<Lang, Record<string, string>> = {
     coCreditDebit: 'Kredit- / Debitkarte', coCreditDebitSub: 'Visa, Mastercard, AMEX',
     coBankTransfer: 'Bank\u00fcberweisung', coBankTransferSub: 'SEPA / IBAN',
     coCrypto: 'Kryptow\u00e4hrung', coCryptoSub: 'BTC, ETH, USDT',
-    coFinancingSub: '3\u201324 Monate, ab 4,9% eff. Jahreszins',
+    coFinancingSub: '3\u201324 Monate \u00b7 10 Länder',
+    coFinanceRegionNote: 'Ratenzahlung nur bei Lieferung in eines der 10 unterstützten Länder. Sonst: nur Direktkauf.',
     coCardNumber: 'Kartennummer', coExpiry: 'G\u00fcltig bis', coCvc: 'CVC',
     coAccepted: 'Akzeptiert', co3dSecure: '3D Secure',
     coBankInfo: '\u00dcberweisen Sie nach Bestellung an unser Konto:',
@@ -569,7 +576,7 @@ const T: Record<Lang, Record<string, string>> = {
     finStep3: 'Gold wird heute versendet', finStep3Sub: 'Nach Genehmigung wird Ihr Barren am selben Tag versendet.',
     finStep4: 'In Raten zahlen', finStep4Sub: 'gold4you sendet Ihnen monatliche Rechnungen. Zahlung per \u00dcberweisung oder Karte.',
     finDiscTitle: 'So funktioniert die Finanzierung bei gold4you',
-    finDiscP1: 'gold4you vergibt keine Kredite direkt. Alle Finanzierungen werden von lizenzierten Drittanbietern in Ihrem Land bereitgestellt. Bei Antrag wird Ihre Anfrage an den jeweiligen Kreditpartner weitergeleitet (z.B. Byjuno oder Powerpay in der Schweiz, Klarna in der EU).',
+    finDiscP1: 'Ratenzahlung in 10 Ländern (CH, DE, AT, FR, IT, ES, NL, BE, SE, FI). Ausserhalb nur Direktkauf. Partner z. B. Byjuno/Powerpay (CH), Klarna (EU); gold4you versendet nach Freigabe.',
     finDiscP2: 'gold4you handelt als H\u00e4ndler \u2014 wir verkaufen Ihnen das Gold, versenden es sofort nach Genehmigung, und Ihr Kreditpartner stellt Ihnen monatlich Rechnung.',
     finBar: 'Barren', finPrice: 'Preis', finTerm: 'Laufzeit', finApr: 'Zinssatz', finMonthly: 'Monatlich',
     finPricesLive: 'Preise basierend auf Live-Spot. Aktualisierung alle 15 Min.',
@@ -610,16 +617,17 @@ const T: Record<Lang, Record<string, string>> = {
     aboutAllPrices: 'Alle Preise', aboutBelowMarket: 'unter Markt',
     aboutDifferent: 'Was uns unterscheidet',
     aboutSpotTitle: 'Spot \u22122% Preise', aboutSpotSub: 'Jeder Barren 2% unter Spot. Keine versteckten Geb\u00fchren.',
-    aboutFinTitle: 'White-Label Finanzierung', aboutFinSub: 'Rechnungsstellung und Raten direkt \u00fcber gold4you.',
-    aboutSourcingTitle: 'OECD-konforme Beschaffung', aboutSourcingSub: 'LBMA Good Delivery akkreditierte Raffinerien. Konfliktfrei, vollst\u00e4ndig r\u00fcckverfolgbar.',
+    aboutFinTitle: 'Ratenzahlung', aboutFinSub: 'Ratenzahlung in 10 europäischen Ländern. Ausserhalb: nur Direktkauf.',
+    aboutSourcingTitle: 'Verarbeitung in den VAE', aboutSourcingSub: 'Unser Gold wird in den Vereinigten Arabischen Emiraten (Emirates) verarbeitet. LBMA-zertifiziert, beglaubigt, rückverfolgbar.',
+    aboutUaeTitle: 'Vereinigte Arabische Emirate', aboutUaeSub: 'Raffination und Verarbeitung in den Emiraten vor versichertem Export in Ihr Land.',
+    aboutFinRegionTitle: 'Wo Ratenzahlung gilt', aboutFinRegionSub: 'Ratenzahlung in CH, DE, AT, FR, IT, ES, NL, BE, SE und FI. Alle anderen Ziele: nur Direktkauf.',
     aboutHowWorks: 'So funktioniert gold4you',
     aboutBrowse: 'Ausw\u00e4hlen', aboutBrowseSub: '1g bis 5kg Barren, alle zu Spot \u22122%.',
-    aboutCheckout: 'Bezahlen', aboutCheckoutSub: 'Karte, Bank, Krypto oder Finanzierung.',
+    aboutCheckout: 'Bezahlen', aboutCheckoutSub: 'Karte, Überweisung oder Krypto weltweit; Ratenzahlung in 10 Ländern.',
     aboutSameDay: 'Express-Versand', aboutSameDaySub: 'Express ab Dubai (1-3 Tage), dann Swiss Post an Ihre Tür (1-2 Tage).',
     aboutYours: 'Es geh\u00f6rt Ihnen', aboutYoursSub: 'Sie sind ab dem ersten Tag Eigent\u00fcmer.',
-    aboutPartners: 'Unsere Raffinerie-Partner (Dubai)',
     aboutLocations: 'Unsere Standorte',
-    aboutHQ: 'Hauptsitz', aboutRefPartner: 'Raffinerie-Partner',
+    aboutHQ: 'Hauptsitz',
     aboutRegNo: 'Reg.-Nr.', aboutHours: '\u00d6ffnungszeiten',
     aboutTeam: 'Unser Team',
     aboutGetInTouch: 'Kontakt aufnehmen',
@@ -632,7 +640,7 @@ const T: Record<Lang, Record<string, string>> = {
     homeFromPrice: 'Ab', homePerMonth: 'pro Monat', homeTerms: 'Laufzeiten', homeFromApr: 'ab eff. Zins', homeSameDay: 'Am selben Tag',
     homeFinExamples: 'Finanzierungsbeispiele',
     homeAprNote: 'Eff. Jahreszins: 4,9% (3\u20136 Mo.), 7,9% (12 Mo.), 9,9% (24 Mo.). Endkonditionen abh\u00e4ngig von Bonit\u00e4tspr\u00fcfung.',
-    homeCreditVia: 'Bonit\u00e4tspr\u00fcfung \u00fcber lokalen Partner. Rechnungsstellung durch gold4you AG.',
+    homeCreditVia: 'Bonitätsprüfung über lokalen Partner. Rechnungsstellung durch gold4you AG.',
     homeRequirements: 'Voraussetzungen',
     homeReqAge: 'Mindestalter 18', homeReqAgeSub: 'Antragsteller muss vollj\u00e4hrig und in einem unterst\u00fctzten Land wohnhaft sein.',
     homeReqIncome: 'Einkommensnachweis', homeReqIncomeSub: 'Angestellt, selbstst\u00e4ndig oder im Ruhestand mit dokumentiertem Einkommen.',
@@ -642,7 +650,7 @@ const T: Record<Lang, Record<string, string>> = {
     homeStartChat: 'Gespr\u00e4ch starten',
     homePersonalAdvisor: 'Pers\u00f6nlicher Berater \u00b7 Online',
     shopGoldSpot: 'Gold Spot', shopLoading: 'Laden...', shopOffline: 'Offline',
-    shopOurPrice: 'Unser Preis: \u22122%', shopViewDetails: 'Details ansehen',
+    shopOurPrice: 'Unser Preis: \u22122%', shopViewDetails: 'Details ansehen', soldOut: 'Ausverkauft', notAvailable: 'Nicht verfügbar',
     kycTitle: 'Identit\u00e4tspr\u00fcfung', kycSubtitle: 'KYC-Verifizierung erforderlich',
     kycSub: 'Bestellungen \u00fcber 5 kg erfordern eine Identit\u00e4tspr\u00fcfung gem. Schweizer GwG.',
     kycResAddress: 'Wohnadresse', kycIdDocType: 'Ausweisdokument',
@@ -670,8 +678,8 @@ const T: Record<Lang, Record<string, string>> = {
     impFinByjuno: 'Byjuno AG (BNPL, Schweiz)',
     impFinPowerpay: 'Powerpay (Ratenzahlung, Schweiz)',
     impFinKlarna: 'Klarna Bank AB (EU-Maerkte)',
-    impRefineries: 'Raffineriestandorte',
-    impRefineriesText: 'Alle Goldbarren werden in Dubai, VAE, von LBMA-akkreditierten Raffinerien hergestellt:',
+    impRefineries: 'Goldverarbeitung',
+    impRefineriesText: 'Alle Goldbarren werden in den Vereinigten Arabischen Emiraten (Emirates) verarbeitet. LBMA-zertifiziert.',
     impDisclaimer: 'Haftungsausschluss',
     impDisclaimerText: 'Alle Informationen auf dieser Website dienen ausschliesslich Informationszwecken und stellen keine Anlageberatung dar. Goldpreise schwanken und vergangene Wertentwicklung ist kein Indikator fuer kuenftige Ergebnisse. gold4you AG uebernimmt keine Haftung fuer die Richtigkeit, Vollstaendigkeit oder Aktualitaet der bereitgestellten Informationen.',
     impExtLinks: 'Externe Links: gold4you AG ist nicht verantwortlich fuer den Inhalt externer Websites, auf die von dieser Seite verlinkt wird.',
@@ -862,14 +870,16 @@ const T: Record<Lang, Record<string, string>> = {
     buyNow: 'Compra oro adesso.', payOver: 'Paga in 3-24 mesi.', goldShips: 'L\'oro viene spedito subito',
     yourBar: 'Il tuo lingotto da', perMonth: '/mese', months: 'mesi',
     chooseBar: 'Scegli il lingotto', howItWorks: 'Come funziona', requirements: 'Requisiti',
-    financingFaq: 'FAQ Finanziamento', availCountries: 'Disponibile in 12 paesi',
+    financingFaq: 'FAQ Finanziamento', availCountries: 'Disponibile in 10 paesi',
+    availCountriesDirect: 'Fuori da questi paesi: solo acquisto diretto (carta, bonifico, crypto).',
+    creditCheckVia: 'Valutazione credito tramite',
     customerReviews: 'Recensioni clienti', verifiedBuyers: 'Acquirenti verificati', verified: 'Verificato',
     reviews: 'recensioni', recognizedBy: 'Riconosciuto da', contact: 'Contatti', getInTouch: 'Contattaci',
     refinery: 'Raffineria', office: 'Ufficio', reachUs: 'Contattaci', whatsapp: 'WhatsApp',
     imprint: 'Impronta', privacy: 'Privacy', terms: 'Termini', shipping: 'Spedizione',
     trustBadgeLbma: 'Certificato LBMA', trustBadgeDelivery: 'Spedizione assicurata', trustBadgeVat: 'Esente IVA',
     trustBadgeFinance: 'Finanziamento 0%', trustBadgeLock: 'Prezzo fissato 15 min',
-    heroTitle1: 'Lingotti d\'oro da', heroTitle2: 'Finanziamento da', heroSub: 'Lingotti d\'oro certificati LBMA da raffinerie autorizzate di Dubai. Esente IVA, spedizione assicurata, finanziamento disponibile.',
+    heroTitle1: 'Lingotti d\'oro da', heroTitle2: 'Finanziamento da', heroSub: 'Lingotti LBMA lavorati negli EAU. Esente IVA, spedizione assicurata. Rate in 10 paesi; altrove solo acquisto diretto.',
     heroBadge: 'Rivenditore svizzero di fiducia',
     catalogSub: 'Certificato LBMA', catalogTitle: 'Acquista lingotti d\'oro online',
     financingProfile: 'Profilo finanziamento', financingProfileSub: 'Completa il tuo profilo per richiedere il finanziamento.',
@@ -910,7 +920,8 @@ const T: Record<Lang, Record<string, string>> = {
     coCreditDebit: 'Carta di credito/debito', coCreditDebitSub: 'Visa, Mastercard, AMEX',
     coBankTransfer: 'Bonifico bancario', coBankTransferSub: 'SEPA / IBAN',
     coCrypto: 'Criptovaluta', coCryptoSub: 'BTC, ETH, USDT',
-    coFinancingSub: '6-48 mesi, 0% interessi',
+    coFinancingSub: '6-48 mesi · 10 paesi',
+    coFinanceRegionNote: 'Rate solo per consegna in uno dei 10 paesi supportati. Altri paesi: solo acquisto diretto.',
     coCardNumber: 'Numero carta', coExpiry: 'Scadenza', coCvc: 'CVC',
     coAccepted: 'Accettate', co3dSecure: '3D Secure',
     coBankInfo: 'Trasferisci sul nostro conto dopo aver effettuato l\'ordine:',
@@ -990,7 +1001,7 @@ const T: Record<Lang, Record<string, string>> = {
     finStep3: 'L\'oro viene spedito oggi', finStep3Sub: 'Una volta approvato, il lingotto viene spedito in giornata. E tuo immediatamente.',
     finStep4: 'Paga a rate', finStep4Sub: 'gold4you ti invia fatture mensili. Paga tramite bonifico o carta.',
     finDiscTitle: 'Come funziona il finanziamento con gold4you',
-    finDiscP1: 'gold4you non concede crediti direttamente. Tutti i finanziamenti sono forniti da istituti di credito terzi autorizzati e regolamentati. La tua richiesta viene inoltrata al partner creditizio competente (es. Byjuno o Powerpay in Svizzera, Klarna nell\'UE).',
+    finDiscP1: 'Rate in 10 paesi (CH, DE, AT, FR, IT, ES, NL, BE, SE, FI). Altrove solo acquisto diretto. Partner Byjuno/Powerpay (CH), Klarna (UE); gold4you spedisce dopo approvazione.',
     finDiscP2: 'gold4you agisce come commerciante -- ti vendiamo l\'oro, lo spediamo immediatamente dopo l\'approvazione, e il tuo partner creditizio ti fattura mensilmente.',
     finBar: 'Lingotto', finPrice: 'Prezzo', finTerm: 'Durata', finApr: 'TAEG', finMonthly: 'Rata',
     finPricesLive: 'Prezzi basati sullo spot in tempo reale. Aggiornati ogni 15 min.',
@@ -1032,16 +1043,17 @@ const T: Record<Lang, Record<string, string>> = {
     aboutAllPrices: 'Tutti i prezzi', aboutBelowMarket: 'sotto il mercato',
     aboutDifferent: 'Cosa ci rende diversi',
     aboutSpotTitle: 'Prezzi Spot -2%', aboutSpotSub: 'Ogni lingotto a un prezzo del 2% sotto lo spot. Nessun costo nascosto.',
-    aboutFinTitle: 'Finanziamento White-Label', aboutFinSub: 'Tutta la fatturazione e le rate gestite direttamente da gold4you -- nessun redirect a terzi.',
-    aboutSourcingTitle: 'Raffinerie LBMA di Dubai', aboutSourcingSub: 'Tutti i lingotti raffinati a Dubai da raffinerie accreditate LBMA. Certificati, completamente tracciabili, oro conflict-free.',
+    aboutFinTitle: 'Pagamento a rate', aboutFinSub: 'Rate in 10 paesi europei. Altrove: solo acquisto diretto.',
+    aboutSourcingTitle: 'Lavorazione negli EAU', aboutSourcingSub: 'Il nostro oro e raffinato e lavorato negli Emirati Arabi Uniti. Certificato LBMA, sigillo di analisi, pienamente tracciabile.',
+    aboutUaeTitle: 'Emirati Arabi Uniti', aboutUaeSub: 'Raffinazione e lavorazione negli Emirati prima dell\'export assicurato.',
+    aboutFinRegionTitle: 'Dove valgono le rate', aboutFinRegionSub: 'Rate in CH, DE, AT, FR, IT, ES, NL, BE, SE e FI. Altre destinazioni: solo acquisto diretto.',
     aboutHowWorks: 'Come funziona gold4you',
     aboutBrowse: 'Sfoglia e seleziona', aboutBrowseSub: 'Lingotti da 1g a 5kg, tutti a spot -2%.',
-    aboutCheckout: 'Checkout', aboutCheckoutSub: 'Carta, bonifico, crypto o finanziamento.',
+    aboutCheckout: 'Checkout', aboutCheckoutSub: 'Carta, bonifico o crypto ovunque; rate in 10 paesi.',
     aboutSameDay: 'Spedizione in giornata', aboutSameDaySub: 'Express da Dubai, spedizione assicurata, firma richiesta.',
     aboutYours: 'E tuo', aboutYoursSub: 'Tuo dal primo giorno.',
-    aboutPartners: 'I nostri partner di raffinazione (Dubai)',
     aboutLocations: 'Le nostre sedi',
-    aboutHQ: 'Sede centrale', aboutRefPartner: 'Partner raffineria',
+    aboutHQ: 'Sede centrale',
     aboutRegNo: 'N. Reg.', aboutHours: 'Orari',
     aboutTeam: 'Il nostro team',
     aboutGetInTouch: 'Contattaci',
@@ -1055,7 +1067,7 @@ const T: Record<Lang, Record<string, string>> = {
     homeFromPrice: 'Da', homePerMonth: 'al mese', homeTerms: 'condizioni', homeFromApr: 'da TAEG', homeSameDay: 'In giornata',
     homeFinExamples: 'Esempi di finanziamento',
     homeAprNote: '0% TAEG (6-48 mesi). Le condizioni finali dipendono dalla valutazione del credito. Fatturazione gestita da gold4you AG tramite MF Group AG.',
-    homeCreditVia: 'Valutazione del credito tramite partner locale. Tutta la fatturazione da gold4you AG. Contattaci per altri paesi europei.',
+    homeCreditVia: 'Valutazione del credito tramite partner locale. Fatturazione da gold4you AG.',
     homeRequirements: 'Requisiti',
     homeReqAge: 'Eta minima 18 anni', homeReqAgeSub: 'Il richiedente deve essere maggiorenne e residente in un paese supportato.',
     homeReqIncome: 'Prova di reddito', homeReqIncomeSub: 'Dipendente, autonomo o pensionato con reddito documentato.',
@@ -1066,7 +1078,7 @@ const T: Record<Lang, Record<string, string>> = {
     homePersonalAdvisor: 'Consulente personale -- Online',
     // Shop
     shopGoldSpot: 'Gold Spot', shopLoading: 'Caricamento...', shopOffline: 'Offline',
-    shopOurPrice: 'Il nostro prezzo: -2%', shopViewDetails: 'Vedi dettagli',
+    shopOurPrice: 'Il nostro prezzo: -2%', shopViewDetails: 'Vedi dettagli', soldOut: 'Esaurito', notAvailable: 'Non disponibile',
     // KYC modal
     kycTitle: 'Verifica identita', kycSubtitle: 'Verifica KYC richiesta',
     kycSub: 'Ordini superiori a 5 kg o richieste personalizzate richiedono la verifica dell\'identita secondo la normativa svizzera antiriciclaggio.',
@@ -1096,8 +1108,8 @@ const T: Record<Lang, Record<string, string>> = {
     impFinByjuno: 'Byjuno AG (BNPL, Svizzera)',
     impFinPowerpay: 'Powerpay (pagamento rateale, Svizzera)',
     impFinKlarna: 'Klarna Bank AB (mercati UE)',
-    impRefineries: 'Sedi delle raffinerie',
-    impRefineriesText: 'Tutti i lingotti d\'oro sono raffinati a Dubai, EAU, da raffinerie accreditate LBMA:',
+    impRefineries: 'Lavorazione oro',
+    impRefineriesText: 'Tutti i lingotti sono lavorati negli Emirati Arabi Uniti. Certificato LBMA.',
     impDisclaimer: 'Esclusione di responsabilita',
     impDisclaimerText: 'Tutte le informazioni su questo sito sono fornite a solo scopo informativo e non costituiscono consulenza sugli investimenti. I prezzi dell\'oro oscillano e le performance passate non sono indicative dei risultati futuri.',
     impExtLinks: 'Link esterni: gold4you AG non e responsabile del contenuto di siti web esterni.',
@@ -1406,6 +1418,7 @@ interface Product {
   manufacturer: string;
   image?: string;
   grams: number;
+  soldOut?: boolean;
 }
 
 interface CartItem extends Product {
@@ -1442,23 +1455,35 @@ const STORE = { orders: 'g4y_orders', kyc: 'g4y_kyc', finance: 'g4y_finance' };
 const load = <T,>(k: string): T[] => { try { return JSON.parse(localStorage.getItem(k) || '[]'); } catch { return []; } };
 const save = <T,>(k: string, d: T[]) => localStorage.setItem(k, JSON.stringify(d));
 
+const fmt = (n: number) => `€${n.toLocaleString('de-DE')}`;
+const TROY_OZ_G = 31.1035;
+/** LBMA spot reference (May 2026) — per kilogram fine gold */
+const SPOT_EUR_PER_KG = 126222.22;
+const SPOT_USD_PER_KG = 146665.0;
+const SPOT_DISCOUNT = 0.98;
+
+const spotListPrice = (grams: number, spotKg = SPOT_EUR_PER_KG) =>
+  Math.round(grams * (spotKg / 1000));
+const spotRetailPrice = (grams: number, spotKg = SPOT_EUR_PER_KG) =>
+  Math.round(grams * (spotKg / 1000) * SPOT_DISCOUNT);
+
 const PRODUCTS: Product[] = [
   {
-    id: 1, name: '1g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 99, salePrice: null,
+    id: 1, name: '1g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(1), salePrice: null, soldOut: true,
     category: 'investment', num: '01', tag: 'Investment', grams: 1,
     description: 'The perfect entry into physical gold. 1 gram of fine gold, LBMA certified, refined in Dubai. Sealed with original assay certificate.',
     weights: ['1g'], gradient: 'from-amber-100 via-yellow-50 to-amber-100', textLight: false,
     dimensions: '15 x 8.5 x 0.4 mm', manufacturer: 'Al Etihad Gold',
   },
   {
-    id: 2, name: '5g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 479, salePrice: null,
+    id: 2, name: '5g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(5), salePrice: null, soldOut: true,
     category: 'investment', num: '02', tag: 'Investment', grams: 5,
     description: 'A compact gold bar for steady wealth building. 5 grams of purest gold, LBMA certified, refined in Dubai. Sealed with original assay certificate.',
     weights: ['5g'], gradient: 'from-amber-200 via-yellow-100 to-amber-200', textLight: false,
     dimensions: '23.3 x 14 x 0.83 mm', manufacturer: 'Al Etihad Gold',
   },
   {
-    id: 3, name: '10g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 949, salePrice: null,
+    id: 3, name: '10g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(10), salePrice: null, soldOut: true,
     category: 'investment', num: '03', tag: 'Investment', grams: 10,
     description: 'Our best-selling entry bar. 10 grams of fine gold — the gold standard for private investors. LBMA certified, refined in Dubai.',
     weights: ['10g'], gradient: 'from-yellow-200 via-amber-100 to-yellow-200', textLight: false,
@@ -1466,7 +1491,7 @@ const PRODUCTS: Product[] = [
     image: '/products/csm_Goldbarren_10g_VS_48c80ee318.jpg',
   },
   {
-    id: 4, name: '20g Fine Gold', subtitle: 'Auriz 999.9', price: 1879, salePrice: null,
+    id: 4, name: '20g Fine Gold', subtitle: 'Auriz 999.9', price: spotListPrice(20), salePrice: null, soldOut: true,
     category: 'investment', num: '04', tag: 'Investment', grams: 20,
     description: 'The balanced investment bar. 20 grams of pure gold, LBMA certified, refined in Dubai. Sealed with original assay certificate.',
     weights: ['20g'], gradient: 'from-amber-300/60 via-yellow-200/60 to-amber-300/60', textLight: false,
@@ -1474,21 +1499,21 @@ const PRODUCTS: Product[] = [
     image: '/products/csm_Goldbarren_20g_VS_91a14a218e.jpg',
   },
   {
-    id: 5, name: '25g Fine Gold', subtitle: 'Emirates Gold 999.9', price: 2339, salePrice: null,
+    id: 5, name: '25g Fine Gold', subtitle: 'Emirates Gold 999.9', price: spotListPrice(25), salePrice: null,
     category: 'investment', num: '05', tag: 'Investment', grams: 25,
     description: '25 grams of 999.9 fine gold — LBMA certified, refined in Dubai. One of the most popular weights for private investors.',
     weights: ['25g'], gradient: 'from-yellow-300/50 via-amber-200/50 to-yellow-300/50', textLight: false,
     dimensions: '32 x 19 x 2.6 mm', manufacturer: 'Emirates Gold',
   },
   {
-    id: 6, name: '50g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 4649, salePrice: null,
+    id: 6, name: '50g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(50), salePrice: null,
     category: 'investment', num: '06', tag: 'Investment', grams: 50,
     description: 'A substantial gold bar for serious investors. Optimal ratio between premium and investment size. LBMA certified.',
     weights: ['50g'], gradient: 'from-amber-400/40 via-yellow-300/40 to-amber-400/40', textLight: false,
     dimensions: '50 x 28 x 2.7 mm', manufacturer: 'Al Etihad Gold',
   },
   {
-    id: 7, name: '100g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 9269, salePrice: null,
+    id: 7, name: '100g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(100), salePrice: null,
     category: 'premium', num: '01', tag: 'Premium', grams: 100,
     description: 'The 100-gram bar — a serious investment piece with minimal premium over spot price. LBMA certified, refined in Dubai.',
     weights: ['100g'], gradient: 'from-stone-700 via-stone-800 to-stone-900', textLight: true,
@@ -1496,7 +1521,7 @@ const PRODUCTS: Product[] = [
     image: '/products/csm_100g_Goldbarren_91bcf94783.jpg',
   },
   {
-    id: 8, name: '250g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 23099, salePrice: null,
+    id: 8, name: '250g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(250), salePrice: null,
     category: 'premium', num: '02', tag: 'Premium', grams: 250,
     description: 'A quarter kilogram of pure investment gold. LBMA certified with the lowest premiums. Ideal for substantial portfolio diversification.',
     weights: ['250g'], gradient: 'from-gray-800 via-gray-900 to-black', textLight: true,
@@ -1504,7 +1529,7 @@ const PRODUCTS: Product[] = [
     image: '/products/csm_Goldbarren_250_0b93c7d2f3.jpg',
   },
   {
-    id: 9, name: '500g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 46099, salePrice: null,
+    id: 9, name: '500g Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(500), salePrice: null,
     category: 'premium', num: '03', tag: 'Premium', grams: 500,
     description: 'Half a kilogram of gold. LBMA Good Delivery standard, refined in Dubai. Maximum value at the lowest premiums.',
     weights: ['500g'], gradient: 'from-neutral-800 via-neutral-900 to-black', textLight: true,
@@ -1512,14 +1537,14 @@ const PRODUCTS: Product[] = [
     image: '/products/csm_Goldbarren_500g_e2c76d2591.jpg',
   },
   {
-    id: 10, name: '1 kg Fine Gold', subtitle: 'Auriz 999.9', price: 92199, salePrice: null,
+    id: 10, name: '1 kg Fine Gold', subtitle: 'Auriz 999.9', price: spotListPrice(1000), salePrice: null,
     category: 'premium', num: '04', tag: 'Premium', grams: 1000,
     description: 'The flagship — one kilogram of pure gold. LBMA certified, refined in Dubai, virtually no premium over spot. The ultimate store of wealth.',
     weights: ['1 kg'], gradient: 'from-neutral-900 via-black to-neutral-900', textLight: true,
     dimensions: '117 x 53 x 10 mm', manufacturer: 'Auriz',
   },
   {
-    id: 11, name: '5 kg Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: 460995, salePrice: null,
+    id: 11, name: '5 kg Fine Gold', subtitle: 'Al Etihad Gold 999.9', price: spotListPrice(5000), salePrice: null,
     category: 'premium', num: '05', tag: 'Premium', grams: 5000,
     description: 'Five kilograms of investment gold. Maximum weight available in our online shop. Orders above 5 kg require KYC verification and are handled via our custom request desk.',
     weights: ['5 kg'], gradient: 'from-black via-neutral-950 to-black', textLight: true,
@@ -1527,14 +1552,33 @@ const PRODUCTS: Product[] = [
   },
 ];
 
-const fmt = (n: number) => `€${n.toLocaleString('de-DE')}`;
-const TROY_OZ_G = 31.1035;
-
 const SECTIONS = [
   { key: 'all',        label: 'All Bars' },
   { key: 'investment', label: 'Investment' },
   { key: 'premium',    label: 'Premium' },
 ];
+
+const FINANCE_COUNTRY_NAMES = new Set([
+  'Switzerland', 'Germany', 'Austria', 'France', 'Italy', 'Spain', 'Netherlands', 'Belgium', 'Sweden', 'Finland',
+  'Schweiz', 'Deutschland', 'Österreich', 'Oesterreich', 'Frankreich', 'Italien', 'Spanien', 'Niederlande', 'Belgien', 'Schweden', 'Finnland',
+  'Svizzera', 'Germania', 'Austria', 'Francia', 'Italia', 'Spagna', 'Paesi Bassi', 'Belgio', 'Svezia', 'Finlandia',
+]);
+
+const isFinanceCountry = (country: string) =>
+  FINANCE_COUNTRY_NAMES.has(country.trim());
+
+const FINANCE_REGIONS = [
+  { cc: 'CH', nameEn: 'Switzerland', nameDe: 'Schweiz', nameIt: 'Svizzera', partner: 'Byjuno / Powerpay' },
+  { cc: 'DE', nameEn: 'Germany', nameDe: 'Deutschland', nameIt: 'Germania', partner: 'Klarna' },
+  { cc: 'AT', nameEn: 'Austria', nameDe: 'Österreich', nameIt: 'Austria', partner: 'Klarna' },
+  { cc: 'FR', nameEn: 'France', nameDe: 'Frankreich', nameIt: 'Francia', partner: 'Klarna' },
+  { cc: 'IT', nameEn: 'Italy', nameDe: 'Italien', nameIt: 'Italia', partner: 'Klarna' },
+  { cc: 'ES', nameEn: 'Spain', nameDe: 'Spanien', nameIt: 'Spagna', partner: 'Klarna' },
+  { cc: 'NL', nameEn: 'Netherlands', nameDe: 'Niederlande', nameIt: 'Paesi Bassi', partner: 'Klarna' },
+  { cc: 'BE', nameEn: 'Belgium', nameDe: 'Belgien', nameIt: 'Belgio', partner: 'Klarna' },
+  { cc: 'SE', nameEn: 'Sweden', nameDe: 'Schweden', nameIt: 'Svezia', partner: 'Klarna' },
+  { cc: 'FI', nameEn: 'Finland', nameDe: 'Finnland', nameIt: 'Finlandia', partner: 'Klarna' },
+] as const;
 
 // ===== MAIN COMPONENT =====
 export default function Gold4You() {
@@ -1587,11 +1631,11 @@ export default function Gold4You() {
     const q = msg.toLowerCase();
     // Smart responses based on keywords
     if (q.match(/prei|price|cost|how much|wieviel|kosten/)) {
-      const spot = spotRef.current ? `€${Math.round(spotRef.current / TROY_OZ_G)}/g` : '';
+      const spot = spotRef.current ? `€${Math.round(spotRef.current / 1000)}/g` : '';
       return `All our bars are priced at spot −2%. ${spot ? `Current spot: ${spot}.` : ''} Prices update every 15 minutes based on live LBMA rates. Which bar size are you interested in?`;
     }
     if (q.match(/financ|finanz|raten|installment|monthly|monatl/)) {
-      return 'We offer financing from 3 to 24 months. Credit check takes ~2 minutes, your gold ships the same day after approval. Zero down payment. gold4you manages all invoicing directly — no third-party redirect. Want me to walk you through an example?';
+      return 'Installment plans are available in 10 countries (CH, DE, AT, FR, IT, ES, NL, BE, SE, FI). Elsewhere: direct purchase only. Credit check via Byjuno/Powerpay (CH) or Klarna (EU). Gold ships after approval. Want an example?';
     }
     if (q.match(/deliver|ship|versand|lieferung|shipping/)) {
       return 'We ship same-day via insured courier (Swiss Post / DHL Express). Signature required. Full tracking provided. Delivery to 38 countries. Typical delivery: 1–3 business days EU, 3–5 days international.';
@@ -1603,7 +1647,7 @@ export default function Gold4You() {
       return 'For orders 10 kg+, we offer negotiated below-spot pricing, a dedicated account manager, allocated vault storage (Zürich/London/Singapore), and white-glove armoured delivery. Call us at +41 44 520 10 00 or I can connect you with our institutional desk.';
     }
     if (q.match(/safe|sicher|trust|scam|legit|echt/)) {
-      return 'gold4you AG is a Swiss-registered company (CHE-123.456.789), FINMA registered, VQF member. All bars are LBMA certified from accredited refineries in Dubai (Al Etihad Gold, Auriz, Emirates Gold). We\'ve sold 14,200+ bars since 2019 with a 4.87/5 rating.';
+      return 'gold4you AG is a Swiss-registered company (CHE-123.456.789), FINMA registered, VQF member. All bars are LBMA certified and processed in the UAE (Emirates). Installments in 10 countries; direct purchase elsewhere. We\'ve sold 14,200+ bars since 2019 with a 4.87/5 rating.';
     }
     if (q.match(/vat|mwst|tax|steuer/)) {
       return 'Investment gold is VAT-exempt (Art. 107 MwStG). You pay exactly the displayed price — no hidden taxes or fees.';
@@ -1636,6 +1680,19 @@ export default function Gold4You() {
   };
 
   const t = { ...T.en, ...T[lang] };
+  const financeRegion = (cc: (typeof FINANCE_REGIONS)[number]['cc']) =>
+    FINANCE_REGIONS.find((x) => x.cc === cc)!;
+  const financeRegionName = (cc: (typeof FINANCE_REGIONS)[number]['cc']) => {
+    const r = financeRegion(cc);
+    return lang === 'de' ? r.nameDe : lang === 'it' ? r.nameIt : r.nameEn;
+  };
+  const shipCountrySupportsFinance = isFinanceCountry(shipInfo.country);
+
+  useEffect(() => {
+    if (checkoutStep === 2 && coPay === 'finance' && !shipCountrySupportsFinance) {
+      setCoPay('card');
+    }
+  }, [checkoutStep, coPay, shipCountrySupportsFinance]);
 
   const changeLang = (l: Lang) => {
     setLang(l);
@@ -1657,18 +1714,18 @@ export default function Gold4You() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [detail, view]);
 
-  // ── Live gold spot price ──
+  // ── Live gold spot price (EUR per kg fine gold) ──
   const REFRESH_MS = 15 * 60 * 1000;
-  const [spotOz, setSpotOz] = useState<number | null>(null);
+  const [spotKg, setSpotKg] = useState<number>(SPOT_EUR_PER_KG);
   const [spotLoading, setSpotLoading] = useState(true);
   const [nextUpdate, setNextUpdate] = useState<number>(0);
   const [countdown, setCountdown] = useState('15:00');
-  const spotRef = useRef<number | null>(null);
+  const spotRef = useRef<number>(SPOT_EUR_PER_KG);
 
   const fetchSpot = useCallback(async () => {
     setSpotLoading(true);
     try {
-      // Proxied via Vite → Swissquote XAU/EUR feed
+      // Proxied via Vite → Swissquote XAU/EUR feed (bid is per troy oz)
       const res = await fetch('/api/spot');
       if (res.ok) {
         const data = await res.json();
@@ -1676,14 +1733,17 @@ export default function Gold4You() {
         const std = prices?.find((p: { spreadProfile: string }) => p.spreadProfile === 'standard');
         const bid = std?.bid ?? prices?.[0]?.bid;
         if (bid && typeof bid === 'number' && bid > 500) {
-          spotRef.current = bid;
-          setSpotOz(bid);
+          const kg = bid > 50000 ? bid : (bid * 1000) / TROY_OZ_G;
+          spotRef.current = kg;
+          setSpotKg(kg);
           setNextUpdate(Date.now() + REFRESH_MS);
           setSpotLoading(false);
           return;
         }
       }
     } catch { /* fallback */ }
+    spotRef.current = SPOT_EUR_PER_KG;
+    setSpotKg(SPOT_EUR_PER_KG);
     setSpotLoading(false);
   }, []);
 
@@ -1709,21 +1769,18 @@ export default function Gold4You() {
     return () => clearInterval(iv);
   }, [nextUpdate, fetchSpot]);
 
-  /** Price = grams × (spot per gram) × 0.98. Fallback to static. */
-  const livePrice = (p: Product) => {
-    if (spotRef.current) {
-      return Math.round(p.grams * (spotRef.current / TROY_OZ_G) * 0.98);
-    }
-    return Math.round(p.price * 0.98);
-  };
-  const isLive = !!spotOz;
+  /** Price = grams × (spot EUR/kg ÷ 1000) × 0.98 (Spot −2%) */
+  const livePrice = (p: Product) => spotRetailPrice(p.grams, spotRef.current);
+  const spotList = (grams: number) => spotListPrice(grams, spotRef.current);
+  const isLive = !spotLoading;
 
   const products = section === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.category === section);
+  const heroProduct = PRODUCTS.find((p) => !p.soldOut) ?? PRODUCTS[4];
   const cartCount = cart.reduce((s, i) => s + i.qty, 0);
   const cartTotal = cart.reduce((s, i) => s + livePrice(i) * i.qty, 0);
 
   const addToCart = (product: Product, selectedWeight: string) => {
-    if (!selectedWeight) return;
+    if (product.soldOut || !selectedWeight) return;
     setCart((prev) => {
       const existing = prev.find((i) => i.id === product.id && i.weight === selectedWeight);
       if (existing) {
@@ -2018,7 +2075,9 @@ export default function Gold4You() {
                       { key: 'card' as const, label: t.coCreditDebit, sub: t.coCreditDebitSub, icon: <CreditCard size={18} /> },
                       { key: 'bank' as const, label: t.coBankTransfer, sub: t.coBankTransferSub, icon: <Shield size={18} /> },
                       { key: 'crypto' as const, label: t.coCrypto, sub: t.coCryptoSub, icon: <Globe size={18} /> },
-                      { key: 'finance' as const, label: t.financing, sub: t.coFinancingSub, icon: <Clock size={18} /> },
+                      ...(shipCountrySupportsFinance
+                        ? [{ key: 'finance' as const, label: t.financing, sub: t.coFinancingSub, icon: <Clock size={18} /> }]
+                        : []),
                     ]).map(({ key, label, sub, icon }) => (
                       <button
                         key={key}
@@ -2031,6 +2090,9 @@ export default function Gold4You() {
                       </button>
                     ))}
                   </div>
+                  {!shipCountrySupportsFinance && (
+                    <p className="text-xs text-gray-500 mb-6 -mt-2">{t.coFinanceRegionNote}</p>
+                  )}
 
                   {coPay === 'card' && (
                     <div className="bg-gray-50 rounded-2xl p-6 space-y-4">
@@ -2635,7 +2697,7 @@ export default function Gold4You() {
                         { bar: '250g', grams: 250, months: 24, apr: 0 },
                         { bar: '1kg', grams: 1000, months: 36, apr: 0 },
                       ].map(({ bar, grams, months, apr }) => {
-                        const price = spotRef.current ? Math.round(grams * (spotRef.current / TROY_OZ_G) * 0.98) : Math.round(grams * 142 * 0.98);
+                        const price = spotRetailPrice(grams, spotRef.current);
                         const total = Math.round(price * (1 + apr / 100));
                         const monthly = Math.round(total / months);
                         return (
@@ -2667,25 +2729,15 @@ export default function Gold4You() {
                     ))}
                   </div>
 
-                  {/* Available countries */}
+                  {/* Installment countries */}
                   <div className="mb-10">
-                    <h2 className="text-xl font-light text-gray-900 mb-6">{t.availCountries}</h2>
+                    <h2 className="text-xl font-light text-gray-900 mb-2">{t.availCountries}</h2>
+                    <p className="text-sm text-gray-500 mb-6">{t.availCountriesDirect}</p>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                      {[
-                        { cc: 'CH', name: 'Switzerland', partner: 'Byjuno / Powerpay' },
-                        { cc: 'DE', name: 'Germany', partner: 'Klarna' },
-                        { cc: 'AT', name: 'Austria', partner: 'Klarna' },
-                        { cc: 'FR', name: 'France', partner: 'Klarna' },
-                        { cc: 'IT', name: 'Italy', partner: 'Klarna' },
-                        { cc: 'ES', name: 'Spain', partner: 'Klarna' },
-                        { cc: 'NL', name: 'Netherlands', partner: 'Klarna' },
-                        { cc: 'BE', name: 'Belgium', partner: 'Klarna' },
-                        { cc: 'SE', name: 'Sweden', partner: 'Klarna' },
-                        { cc: 'FI', name: 'Finland', partner: 'Klarna' },
-                      ].map(({ cc, name, partner }) => (
+                      {FINANCE_REGIONS.map(({ cc, partner }) => (
                         <div key={cc} className="bg-gray-50 rounded-2xl p-4">
-                          <p className="text-sm font-medium text-gray-900">{name}</p>
-                          <p className="text-[10px] text-gray-400 mt-0.5">{partner}</p>
+                          <p className="text-sm font-medium text-gray-900">{financeRegionName(cc)}</p>
+                          <p className="text-[10px] text-gray-400 mt-0.5">{t.creditCheckVia} {partner}</p>
                         </div>
                       ))}
                     </div>
@@ -3083,11 +3135,6 @@ export default function Gold4You() {
                 <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 space-y-3">
                   <h2 className="text-base font-medium text-gray-900">{t.impRefineries}</h2>
                   <p>{t.impRefineriesText}</p>
-                  <ul className="list-disc list-inside space-y-1">
-                    <li>Al Etihad Gold Refinery DMCC, Dubai</li>
-                    <li>Auriz DMCC, Dubai</li>
-                    <li>Emirates Gold DMCC, Dubai</li>
-                  </ul>
                 </div>
 
                 <div className="bg-gray-50 rounded-2xl border border-gray-100 p-6 space-y-3">
@@ -3555,29 +3602,27 @@ export default function Gold4You() {
                 </div>
               </div>
 
-              {/* Refinery Partners */}
-              <div className="mb-10">
-                <h2 className="text-xl font-light text-gray-900 mb-6">{t.aboutPartners}</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                  {[
-                    { name: 'Al Etihad Gold', loc: 'Dubai, UAE', year: '2009', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=400&h=300&fit=crop' },
-                    { name: 'Auriz', loc: 'Dubai, UAE', year: '2015', img: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=400&h=300&fit=crop' },
-                    { name: 'Emirates Gold', loc: 'Dubai, UAE', year: '1992', img: 'https://images.unsplash.com/photo-1546412414-e1885259563a?w=400&h=300&fit=crop' },
-                    { name: 'Gulf Gold Refinery', loc: 'Ajman, UAE', year: '2005', img: 'https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?w=400&h=300&fit=crop' },
-                  ].map(({ name, loc, year, img }) => (
-                    <div key={name} className="relative rounded-2xl overflow-hidden h-40 group">
-                      <img src={img} alt={name} className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-4">
-                        <p className="text-sm font-medium text-white">{name}</p>
-                        <p className="text-[10px] text-white/60 mt-0.5">{loc} · Since {year}</p>
-                      </div>
+              {/* UAE processing */}
+              <div className="mb-10 rounded-3xl border border-amber-100 bg-amber-50/50 p-8 md:p-10">
+                <p className="text-[9px] tracking-[0.3em] uppercase text-amber-700/70 font-medium mb-2">{t.aboutUaeTitle}</p>
+                <p className="text-sm text-gray-700 leading-relaxed max-w-2xl">{t.aboutUaeSub}</p>
+              </div>
+
+              {/* Installments region */}
+              <div className="mb-10 rounded-3xl border border-gray-100 bg-gray-50 p-8 md:p-10">
+                <p className="text-[9px] tracking-[0.3em] uppercase text-gray-500 font-medium mb-2">{t.aboutFinRegionTitle}</p>
+                <p className="text-sm text-gray-700 leading-relaxed max-w-2xl mb-4">{t.aboutFinRegionSub}</p>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                  {FINANCE_REGIONS.map(({ cc, partner }) => (
+                    <div key={cc} className="text-xs bg-white border border-gray-200 rounded-xl px-3 py-2">
+                      <p className="font-medium text-gray-900">{cc} · {financeRegionName(cc)}</p>
+                      <p className="text-[10px] text-gray-400 mt-0.5">{t.creditCheckVia} {partner}</p>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Locations — side by side */}
+              {/* Locations */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 <div className="rounded-2xl border border-gray-100 p-6">
                   <p className="text-[9px] tracking-[0.3em] uppercase text-amber-600 font-medium mb-3">{t.aboutHQ}</p>
@@ -3587,10 +3632,9 @@ export default function Gold4You() {
                   <p className="text-[10px] text-gray-400 mt-2 bg-gray-50 rounded-lg px-2.5 py-1.5 inline-block">{t.aboutMonFri}</p>
                 </div>
                 <div className="rounded-2xl border border-gray-100 p-6">
-                  <p className="text-[9px] tracking-[0.3em] uppercase text-gray-500 font-medium mb-3">{t.aboutRefPartner}</p>
-                  <p className="text-sm font-medium text-gray-900">Al Etihad Gold DMCC</p>
-                  <p className="text-xs text-gray-500 mt-1">{t.aboutDmcc}</p>
-                  <p className="text-[10px] text-gray-400 mt-2 bg-gray-50 rounded-lg px-2.5 py-1.5 inline-block">{t.aboutByAppt}</p>
+                  <p className="text-[9px] tracking-[0.3em] uppercase text-gray-500 font-medium mb-3">{t.aboutUaeTitle}</p>
+                  <p className="text-sm font-medium text-gray-900">{t.aboutSourcingTitle}</p>
+                  <p className="text-xs text-gray-500 mt-2 leading-relaxed">{t.aboutSourcingSub}</p>
                 </div>
               </div>
 
@@ -3754,28 +3798,46 @@ export default function Gold4You() {
                   <div className="bg-white border border-gray-200 rounded-3xl p-6 shadow-sm">
                     <div itemProp="offers" itemScope itemType="https://schema.org/Offer">
                       <meta itemProp="priceCurrency" content="EUR" />
-                      <link itemProp="availability" href="https://schema.org/InStock" />
+                      <link itemProp="availability" href={detail.soldOut ? 'https://schema.org/OutOfStock' : 'https://schema.org/InStock'} />
                       <div className="flex items-center justify-between mb-1">
                         <p className="text-xs text-gray-400 uppercase tracking-wider">{t.detailOneTime}</p>
-                        <div className="flex items-center gap-1.5 text-[10px] text-gray-400">
-                          <div className={`w-1.5 h-1.5 rounded-full ${isLive ? 'bg-green-400 animate-pulse' : 'bg-gray-300'}`} />
-                          {isLive ? `${t.detailLive} · ${countdown}` : spotLoading ? t.shopLoading : t.shopOffline}
-                        </div>
+                        {!detail.soldOut && (
+                          <div className="flex items-center gap-1.5 text-[10px] text-gray-400">
+                            <div className={`w-1.5 h-1.5 rounded-full ${isLive ? 'bg-green-400 animate-pulse' : 'bg-gray-300'}`} />
+                            {isLive ? `${t.detailLive} · ${countdown}` : spotLoading ? t.shopLoading : t.shopOffline}
+                          </div>
+                        )}
                       </div>
                       <div className="flex items-baseline gap-3 mb-1">
-                        <span className="text-3xl font-semibold text-gray-900" itemProp="price" content={String(livePrice(detail))}>{fmt(livePrice(detail))}</span>
-                        <span className="text-sm text-gray-400 line-through">{fmt(spotOz ? Math.round(detail.grams * (spotOz / TROY_OZ_G)) : detail.price)}</span>
+                        {detail.soldOut ? (
+                          <span className="text-2xl font-semibold text-gray-500 uppercase tracking-wide">{t.notAvailable}</span>
+                        ) : (
+                          <>
+                            <span className="text-3xl font-semibold text-gray-900" itemProp="price" content={String(livePrice(detail))}>{fmt(livePrice(detail))}</span>
+                            <span className="text-sm text-gray-400 line-through">{fmt(spotList(detail.grams))}</span>
+                          </>
+                        )}
                       </div>
-                      <p className="text-xs text-green-600 font-medium mb-5">{t.detailSpotApplied}</p>
+                      {detail.soldOut ? (
+                        <p className="text-xs text-gray-500 font-semibold mb-5 uppercase tracking-wide">{t.notAvailable}</p>
+                      ) : (
+                        <p className="text-xs text-green-600 font-medium mb-5">{t.detailSpotApplied}</p>
+                      )}
                     </div>
 
-                    <button
-                      onClick={() => addToCart(detail, weight || detail.weights[0])}
-                      className="w-full bg-amber-400/60 hover:bg-amber-400/80 text-amber-900 text-sm font-medium py-3.5 rounded-xl transition-all active:scale-[0.98] flex items-center justify-between px-6 mb-5"
-                    >
-                      <span>{t.addToCart}</span>
-                      <ArrowRight size={18} />
-                    </button>
+                    {detail.soldOut ? (
+                      <div className="w-full bg-gray-100 text-gray-600 text-sm font-semibold py-3.5 rounded-xl flex items-center justify-center px-6 mb-5 cursor-not-allowed uppercase tracking-wide">
+                        {t.notAvailable}
+                      </div>
+                    ) : (
+                      <button
+                        onClick={() => addToCart(detail, weight || detail.weights[0])}
+                        className="w-full bg-amber-400/60 hover:bg-amber-400/80 text-amber-900 text-sm font-medium py-3.5 rounded-xl transition-all active:scale-[0.98] flex items-center justify-between px-6 mb-5"
+                      >
+                        <span>{t.addToCart}</span>
+                        <ArrowRight size={18} />
+                      </button>
+                    )}
 
                     {/* Payment logos — monochrome */}
                     <div className="flex items-center gap-2.5 justify-center flex-wrap opacity-50">
@@ -3795,11 +3857,13 @@ export default function Gold4You() {
                   </div>
 
                   {/* ── Financing Card (secondary) ── */}
+                  {!detail.soldOut && (
                   <div className="bg-gray-50 border border-gray-100 rounded-3xl p-6">
+                    <p className="text-[10px] text-gray-500 mb-4 leading-relaxed">{t.aboutFinRegionSub}</p>
                     <div className="flex items-center justify-between mb-4">
                       <div>
                         <h3 className="text-sm font-semibold text-gray-900">{t.financing}</h3>
-                        <p className="text-[10px] text-gray-400">0% APR · 6-48 {t.months}</p>
+                        <p className="text-[10px] text-gray-400">0% APR · 6-48 {t.months} · 10 {lang === 'de' ? 'Länder' : lang === 'it' ? 'paesi' : 'countries'}</p>
                       </div>
                       <CreditCard size={16} className="text-gray-400" />
                     </div>
@@ -3840,6 +3904,7 @@ export default function Gold4You() {
                       );
                     })()}
                   </div>
+                  )}
 
                   {/* ── Buyer Protection (collapsible) ── */}
                   <div className="bg-gray-50 border border-gray-100 rounded-3xl overflow-hidden">
@@ -4059,8 +4124,8 @@ export default function Gold4You() {
                   <span className="text-xs text-gray-500">{t.shopGoldSpot}</span>
                   {isLive ? (
                     <>
-                      <span className="text-sm font-semibold text-gray-900">{fmt(Math.round(spotOz!))}/oz</span>
-                      <span className="text-[10px] text-gray-400">({fmt(Math.round(spotOz! / TROY_OZ_G))}/g)</span>
+                      <span className="text-sm font-semibold text-gray-900">{fmt(Math.round(spotKg))}/kg</span>
+                      <span className="text-[10px] text-gray-400">({fmt(Math.round(spotKg / 1000))}/g · ${Math.round(SPOT_USD_PER_KG).toLocaleString('en-US')}/kg)</span>
                     </>
                   ) : (
                     <span className="text-sm text-gray-400">{spotLoading ? t.shopLoading : t.shopOffline}</span>
@@ -4107,7 +4172,13 @@ export default function Gold4You() {
                       className="group cursor-pointer"
                       onClick={() => { setDetail(product); setWeight(product.weights[0] || ''); }}
                     >
-                      <div className={`aspect-[4/5] rounded-2xl ${product.image ? 'bg-gray-50' : `bg-gradient-to-br ${product.gradient}`} relative overflow-hidden mb-3 transition-transform duration-300 group-hover:scale-[1.01]`}>
+                      <div className={`aspect-[4/5] rounded-2xl ${product.image ? 'bg-gray-50' : `bg-gradient-to-br ${product.gradient}`} relative overflow-hidden mb-3 transition-transform duration-300 ${product.soldOut ? 'opacity-75' : 'group-hover:scale-[1.01]'}`}>
+                        {product.soldOut && (
+                          <div className="absolute inset-0 z-20 bg-white/75 backdrop-blur-[1px] flex flex-col items-center justify-center gap-1">
+                            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-900">{t.notAvailable}</span>
+                            <span className="text-[10px] text-gray-500">{t.soldOut}</span>
+                          </div>
+                        )}
                         {product.image ? (
                           <img src={product.image} alt={product.name} className="w-full h-full object-contain p-6" loading="lazy" />
                         ) : (
@@ -4115,22 +4186,30 @@ export default function Gold4You() {
                             <span className={`text-5xl font-extralight ${product.textLight ? 'text-white/8' : 'text-black/[0.04]'}`} style={{ letterSpacing: '-0.04em' }}>Au</span>
                           </div>
                         )}
-                        <div className="absolute inset-x-0 bottom-0 flex justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="bg-white/95 backdrop-blur-md text-xs tracking-wide text-gray-900 px-5 py-2.5 rounded-2xl shadow-lg font-medium">
-                            {t.shopViewDetails}
+                        {!product.soldOut && (
+                          <div className="absolute inset-x-0 bottom-0 flex justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="bg-white/95 backdrop-blur-md text-xs tracking-wide text-gray-900 px-5 py-2.5 rounded-2xl shadow-lg font-medium">
+                              {t.shopViewDetails}
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                       <div className="flex items-start justify-between gap-2">
                         <div className="min-w-0">
-                          <h2 className="text-sm font-medium text-gray-900 truncate">{product.name}</h2>
+                          <h2 className={`text-sm font-medium truncate ${product.soldOut ? 'text-gray-500' : 'text-gray-900'}`}>{product.name}</h2>
                         </div>
                         <div className="text-right flex-shrink-0">
-                          <p className="text-sm font-semibold text-gray-900">{spotLoading && !spotOz ? '...' : fmt(livePrice(product))}</p>
-                          <div className="flex items-center gap-1 justify-end">
-                            {isLive && <div className="w-1 h-1 rounded-full bg-green-400 animate-pulse" />}
-                            <p className="text-[10px] text-green-600 font-medium">{isLive ? `−2% · ${countdown}` : 'Spot −2%'}</p>
-                          </div>
+                          {product.soldOut ? (
+                            <p className="text-sm font-semibold text-gray-500">{t.notAvailable}</p>
+                          ) : (
+                            <>
+                              <p className="text-sm font-semibold text-gray-900">{spotLoading ? '...' : fmt(livePrice(product))}</p>
+                              <div className="flex items-center gap-1 justify-end">
+                                {isLive && <div className="w-1 h-1 rounded-full bg-green-400 animate-pulse" />}
+                                <p className="text-[10px] text-green-600 font-medium">{isLive ? `−2% · ${countdown}` : 'Spot −2%'}</p>
+                              </div>
+                            </>
+                          )}
                         </div>
                       </div>
                     </article>
@@ -4181,8 +4260,8 @@ export default function Gold4You() {
                         {t.heroBadge}
                       </div>
                       <h2 className="text-2xl md:text-4xl font-light text-white mb-3" style={{ letterSpacing: '-0.02em' }}>
-                        {t.heroTitle1} <span className="text-amber-400">{fmt(livePrice(PRODUCTS[0]))}</span><br />
-                        {t.heroTitle2} <span className="text-amber-400">{fmt(Math.round(livePrice(PRODUCTS[0]) / 6))}{t.perMonth}</span>
+                        {t.heroTitle1} <span className="text-amber-400">{fmt(livePrice(heroProduct))}</span><br />
+                        {t.heroTitle2} <span className="text-amber-400">{fmt(Math.round(livePrice(heroProduct) / 6))}{t.perMonth}</span>
                       </h2>
                       <p className="text-sm text-white/70 mb-6 max-w-sm">
                         {t.heroSub}
@@ -4243,19 +4322,27 @@ export default function Gold4You() {
                       onClick={() => { setDetail(product); setWeight(product.weights[0] || ''); }}
                       role="listitem"
                     >
-                      <div className={`relative aspect-square rounded-3xl ${product.image ? 'bg-gray-50' : `bg-gradient-to-br ${product.gradient}`} overflow-hidden mb-4 transition-all duration-500 ease-out group-hover:shadow-xl group-hover:scale-[1.015]`}>
+                      <div className={`relative aspect-square rounded-3xl ${product.image ? 'bg-gray-50' : `bg-gradient-to-br ${product.gradient}`} overflow-hidden mb-4 transition-all duration-500 ease-out ${product.soldOut ? 'opacity-75' : 'group-hover:shadow-xl group-hover:scale-[1.015]'}`}>
+                        {product.soldOut && (
+                          <div className="absolute inset-0 z-20 bg-white/75 backdrop-blur-[1px] flex flex-col items-center justify-center gap-1">
+                            <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-900">{t.notAvailable}</span>
+                            <span className="text-[10px] text-gray-500">{t.soldOut}</span>
+                          </div>
+                        )}
                         <div className="absolute top-4 left-4 z-10">
                           <span className={`text-[10px] tracking-[0.2em] uppercase font-medium ${product.image ? 'text-black/20' : product.textLight ? 'text-white/40' : 'text-black/25'}`}>
                             N°{product.num}
                           </span>
                         </div>
-                        <div className="absolute top-4 right-4 z-10">
-                          {product.salePrice ? (
-                            <span className="text-[10px] tracking-[0.1em] uppercase font-medium bg-white/90 text-amber-700 px-3 py-1 rounded-full backdrop-blur-sm">{t.homeSale}</span>
-                          ) : (
-                            <span className={`text-[10px] tracking-[0.1em] uppercase font-medium ${product.image ? 'text-black/10' : product.textLight ? 'text-white/25' : 'text-black/15'}`}>999.9</span>
-                          )}
-                        </div>
+                        {!product.soldOut && (
+                          <div className="absolute top-4 right-4 z-10">
+                            {product.salePrice ? (
+                              <span className="text-[10px] tracking-[0.1em] uppercase font-medium bg-white/90 text-amber-700 px-3 py-1 rounded-full backdrop-blur-sm">{t.homeSale}</span>
+                            ) : (
+                              <span className={`text-[10px] tracking-[0.1em] uppercase font-medium ${product.image ? 'text-black/10' : product.textLight ? 'text-white/25' : 'text-black/15'}`}>999.9</span>
+                            )}
+                          </div>
+                        )}
                         {product.image ? (
                           <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-contain p-8 transition-transform duration-500 group-hover:scale-105" loading="lazy" />
                         ) : (
@@ -4263,22 +4350,30 @@ export default function Gold4You() {
                             <span className={`text-5xl font-extralight ${product.textLight ? 'text-white/8' : 'text-black/[0.04]'}`} style={{ letterSpacing: '-0.04em' }}>Au</span>
                           </div>
                         )}
-                        <div className="absolute inset-x-0 bottom-0 flex justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <div className="bg-white/95 backdrop-blur-md text-xs tracking-wide text-gray-900 px-5 py-2.5 rounded-2xl shadow-lg font-medium">
-                            {t.shopViewDetails}
+                        {!product.soldOut && (
+                          <div className="absolute inset-x-0 bottom-0 flex justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div className="bg-white/95 backdrop-blur-md text-xs tracking-wide text-gray-900 px-5 py-2.5 rounded-2xl shadow-lg font-medium">
+                              {t.shopViewDetails}
+                            </div>
                           </div>
-                        </div>
+                        )}
                       </div>
                       <div className="px-1 flex items-start justify-between gap-2 mt-2">
                         <div className="min-w-0">
-                          <h2 className="text-sm font-medium text-gray-900 truncate">{product.name}</h2>
+                          <h2 className={`text-sm font-medium truncate ${product.soldOut ? 'text-gray-500' : 'text-gray-900'}`}>{product.name}</h2>
                         </div>
                         <div className="text-right flex-shrink-0">
-                          <p className="text-sm font-semibold text-gray-900">{spotLoading && !spotOz ? '...' : fmt(livePrice(product))}</p>
-                          <div className="flex items-center gap-1 justify-end">
-                            {isLive && <div className="w-1 h-1 rounded-full bg-green-400 animate-pulse" />}
-                            <p className="text-[10px] text-green-600 font-medium">{isLive ? `−2% · ${countdown}` : 'Spot −2%'}</p>
-                          </div>
+                          {product.soldOut ? (
+                            <p className="text-sm font-semibold text-gray-500">{t.notAvailable}</p>
+                          ) : (
+                            <>
+                              <p className="text-sm font-semibold text-gray-900">{spotLoading ? '...' : fmt(livePrice(product))}</p>
+                              <div className="flex items-center gap-1 justify-end">
+                                {isLive && <div className="w-1 h-1 rounded-full bg-green-400 animate-pulse" />}
+                                <p className="text-[10px] text-green-600 font-medium">{isLive ? `−2% · ${countdown}` : 'Spot −2%'}</p>
+                              </div>
+                            </>
+                          )}
                         </div>
                       </div>
                     </article>
@@ -4384,13 +4479,10 @@ export default function Gold4You() {
                             </tr>
                           </thead>
                           <tbody className="divide-y divide-gray-100">
-                            {[
-                              { name: '1g Fine Gold', price: 99 },
-                              { name: '10g Fine Gold', price: 945 },
-                              { name: '50g Fine Gold', price: 4690 },
-                              { name: '100g Fine Gold', price: 9350 },
-                              { name: '250g Fine Gold', price: 23300 },
-                            ].map(({ name, price }) => (
+                            {PRODUCTS.filter((p) => [1, 3, 6, 7, 8].includes(p.id)).map((p) => ({
+                              name: p.name,
+                              price: livePrice(p),
+                            })).map(({ name, price }) => (
                               <tr key={name} className="text-gray-700">
                                 <td className="py-3 font-medium">{name}</td>
                                 <td className="py-3 text-right">{fmt(price)}</td>
@@ -4420,28 +4512,18 @@ export default function Gold4You() {
                   {!collapsed.countries && (
                     <div className="px-6 md:px-8 pb-6 md:pb-8">
                       <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 mb-3">
-                        {[
-                          { flag: 'CH', country: 'Switzerland', partner: 'Byjuno / Powerpay' },
-                          { flag: 'DE', country: 'Germany', partner: 'Klarna' },
-                          { flag: 'AT', country: 'Austria', partner: 'Klarna' },
-                          { flag: 'FR', country: 'France', partner: 'Klarna' },
-                          { flag: 'IT', country: 'Italy', partner: 'Klarna' },
-                          { flag: 'ES', country: 'Spain', partner: 'Klarna' },
-                          { flag: 'NL', country: 'Netherlands', partner: 'Klarna' },
-                          { flag: 'BE', country: 'Belgium', partner: 'Klarna' },
-                          { flag: 'SE', country: 'Sweden', partner: 'Klarna' },
-                          { flag: 'FI', country: 'Finland', partner: 'Klarna' },
-                        ].map(({ flag, country, partner }) => (
-                          <div key={country} className="flex items-center gap-3 bg-white rounded-xl px-4 py-3">
-                            <span className="w-8 h-8 rounded-lg bg-gray-100 text-[10px] font-semibold text-gray-500 flex items-center justify-center flex-shrink-0">{flag}</span>
+                        {FINANCE_REGIONS.map(({ cc, partner }) => (
+                          <div key={cc} className="flex items-center gap-3 bg-white rounded-xl px-4 py-3">
+                            <span className="w-8 h-8 rounded-lg bg-gray-100 text-[10px] font-semibold text-gray-500 flex items-center justify-center flex-shrink-0">{cc}</span>
                             <div>
-                              <p className="text-sm font-medium text-gray-900">{country}</p>
-                              <p className="text-xs text-gray-400">Credit check via {partner}</p>
+                              <p className="text-sm font-medium text-gray-900">{financeRegionName(cc)}</p>
+                              <p className="text-xs text-gray-400">{t.creditCheckVia} {partner}</p>
                             </div>
                           </div>
                         ))}
                       </div>
                       <p className="text-xs text-gray-400">{t.homeCreditVia}</p>
+                      <p className="text-xs text-gray-400 mt-2">{t.availCountriesDirect}</p>
                     </div>
                   )}
                 </div>
