@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
-import { ShoppingBag, X, ArrowRight, ArrowLeft, Minus, Plus, Star, Shield, Truck, BadgeCheck, CreditCard, Clock, MapPin, User, Users, Award, Quote, Mail, Phone, MessageCircle, Globe, Search, Package, TrendingDown, ChevronRight, Info } from 'lucide-react';
+import { ShoppingBag, X, ArrowRight, ArrowLeft, Minus, Plus, Star, Shield, Truck, BadgeCheck, CreditCard, Clock, MapPin, User, Quote, Mail, Phone, MessageCircle, Globe, Search, Package, TrendingDown, ChevronRight, Info } from 'lucide-react';
 
 // ===== i18n =====
 
@@ -1389,15 +1389,6 @@ const REVIEWS = [
   { name: 'Anonymous', location: 'UK', date: 'Feb 2026', rating: 5, product: '5kg Al Etihad', text: 'Smooth transaction. Dedicated account manager was very helpful.' },
 ];
 
-const TEAM = [
-  { name: 'Luca Fontana', role: 'CEO & Founder', location: 'Zurich', photo: '/team-luca.jpg' },
-  { name: 'Sofia Brunner', role: 'Head of Operations', location: 'Zurich', photo: '/team-sofia.jpg' },
-  { name: 'Marc Keller', role: 'Head of Trading', location: 'Lugano', photo: '/team-marc.jpg' },
-  { name: 'Elena Wyss', role: 'Compliance & Legal', location: 'Zurich', photo: '/team-elena.jpg' },
-  { name: 'Thomas Meier', role: 'Refinery Director', location: 'Lugano', photo: '/team-thomas.jpg' },
-  { name: 'Anna Roth', role: 'Customer Relations', location: 'Zurich', photo: '/team-anna.jpg' },
-];
-
 interface Product {
   id: number;
   name: string;
@@ -1545,12 +1536,6 @@ const SECTIONS = [
   { key: 'premium',    label: 'Premium' },
 ];
 
-const SECTION_HEADERS: Record<string, { sub: string; title: string }> = {
-  all:        { sub: 'All Gold Bars', title: 'Gold Bars' },
-  investment: { sub: 'Gold Bars — 1g to 50g', title: 'Investment' },
-  premium:    { sub: 'Premium — 100g to 1 kg', title: 'Premium' },
-};
-
 // ===== MAIN COMPONENT =====
 export default function Gold4You() {
   const [section, setSection] = useState('all');
@@ -1561,7 +1546,7 @@ export default function Gold4You() {
   const [weight, setWeight] = useState('');
   const [cart, setCart] = useState<CartItem[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [payMethod, setPayMethod] = useState<'card' | 'bank' | 'crypto' | 'token' | 'finance'>('card');
+  const [, setPayMethod] = useState<'card' | 'bank' | 'crypto' | 'token' | 'finance'>('card');
   const [showKyc, setShowKyc] = useState(false);
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({ examples: true, countries: true, requirements: true });
 
@@ -3837,7 +3822,6 @@ export default function Gold4You() {
 
                     {(() => {
                       const p = livePrice(detail);
-                      const rate = 0;
                       const total = p;
                       const monthly = Math.round(total / financePlan);
                       return (
